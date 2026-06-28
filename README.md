@@ -1,49 +1,56 @@
-# Starlight Starter Kit: Basics
+# Starlight
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+A documentation site built with [Starlight](https://starlight.astro.build/), the docs framework for [Astro](https://astro.build/).
 
+> Project named in tribute to its creators — the name fit too well to change.
+
+## Requirements
+
+- Node.js 22+ (even-numbered versions only)
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start the dev server (http://localhost:4321)
+npm run dev
+
+# Build for production (outputs to ./dist)
+npm run build
+
+# Preview the production build locally
+npm run preview
 ```
-npm create astro@latest -- --template starlight
-```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Project Structure
 
 ```
 .
-├── public/
 ├── src/
-│   ├── assets/
 │   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+│   │   └── docs/          # Markdown/MDX pages (file-based routing)
+│   └── content.config.ts  # Content collection schema
+├── astro.config.mjs       # Starlight config (sidebar, theme, etc.)
+└── package.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Adding Content
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+Drop a `.md` or `.mdx` file into `src/content/docs/` with frontmatter:
 
-Static assets, like favicons, can be placed in the `public/` directory.
+```md
+---
+title: My Page
+description: A short description.
+---
 
-## 🧞 Commands
+Your content here.
+```
 
-All commands are run from the root of the project, from a terminal:
+Every file becomes a page automatically. `index.mdx` is the homepage.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Configuration
 
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Site-wide settings (title, sidebar, social links, theme) live in `astro.config.mjs`. See the [Starlight configuration reference](https://starlight.astro.build/reference/configuration/).
