@@ -1,40 +1,42 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Welcome to my home page
+description: The all-in-one document about concepts and my journey in tech.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: From a starry-eyed CS student to a security architect, one concept at a time.
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Start as an Engineer
+      link: /guides/engineer-start/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: Start as a Security Architect
+      link: /guides/secarch-start/
+      icon: right-arrow
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## What is this
+
+This is my home page of the all-in-one document, where I write up about concept, and my journey, in tech.
+
+From a starry-eyed CS student, with all sort of "all talk, no action" typical, to learning engineerning concept, and end up as security architect _(at the time I'm writing this)_.
+
+The document will be written in an incremental way of reading, which, you'll be reading from the simplest term _(i.e. what even an application???)_ before the more advanced _(i.e. how to build one, what patterns?)_, and written in my own view about the field.
+
+There will be 2 opening you could try on, as I designed by my experience as engineer (before) and security architect (as the time I write this) with 2 different starting point. Of course they will be referencing each other; i.e. a Security architect also need to know what is an application that "lives" in the internet, right? so, expect it to happen, and enjoy my work!
 
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Start as an Engineer" icon="pencil">
+    Begin from the engineer's view — what an application even is, before the
+    more advanced patterns.
+  </Card>
+  <Card title="Start as a Security Architect" icon="setting">
+    Begin from the security architect's view — how the same concepts look from
+    where I stand now.
+  </Card>
 </CardGrid>
